@@ -13,8 +13,9 @@ class Student extends Model
         'code',
         'first_name',
         'last_name',
-        'school_code',
-        'grade'
+        'grade',
+        'parent_id',
+        'school_id'
     ];
 
     public function school()
