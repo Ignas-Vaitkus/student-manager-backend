@@ -45,11 +45,21 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Student::create([
             'code' => 39912311111,
-            'first_name' => 'Vilius',
-            'last_name' => 'Vilesys',
+            'first_name' => 'Petras',
+            'last_name' => 'Petrauskas',
             'parent_id' => $user->id,
             'school_id' => $school->code,
             'grade' => 10
+        ]);
+
+        \App\Models\Student::create([
+            'code' => 49912311111,
+            'first_name' => 'Rita',
+            'last_name' => 'Ritaitė',
+            'parent_id' => $user->id,
+            'school_id' => $school->code,
+            'grade' => 10,
+            'approved' => 1
         ]);
     }
 }
