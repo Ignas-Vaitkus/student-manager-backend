@@ -19,6 +19,10 @@ class Student extends Model
         'approved'
     ];
 
+    protected $primaryKey = 'code';
+
+    public $incrementing = false;
+
     public function school()
     {
         return $this->belongsTo(School::class);

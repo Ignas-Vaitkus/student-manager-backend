@@ -15,6 +15,10 @@ class School extends Model
         'address'
     ];
 
+    protected $primaryKey = 'code';
+
+    public $incrementing = false;
+
     public function students()
     {
         return $this->hasMany(Student::class);
