@@ -25,7 +25,7 @@ class ApiAuthController extends Controller
 
         $token = $user->createToken('appToken')->plainTextToken;
 
-        return response(['user' => $user, 'token' => $token]);
+        return response(['token' => $token]); //['user' => $user, 'token' => $token]
     }
 
     public function login(Request $request)
@@ -37,7 +37,7 @@ class ApiAuthController extends Controller
 
         $user = User::where('email', $fields['email'])->first();
         if ($user && Auth::attempt(['email' => $fields['email'], 'password' => $fields['password']])) {
-            return response(['user' => $user, 'token' => $user->createToken('appToken')->plainTextToken]);
+            return response(['token' => $user->createToken('appToken')->plainTextToken]); //'user' => $user
         }
 
         return response(["message" => "Invalid authentication credentials"], 401);
