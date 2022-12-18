@@ -23,7 +23,7 @@ class ApiAuthController extends Controller
             'password' => Hash::make($fields['password'])
         ]);
 
-        return response(['token' => $user->createToken('appToken')->plainTextToken, 'role' => $user->role->id]); //['user' => $user, 'token' => $token]
+        return response(['token' => $user->createToken('appToken')->plainTextToken, 'role' => 2]); //['user' => $user, 'token' => $token]
     }
 
     public function login(Request $request)
