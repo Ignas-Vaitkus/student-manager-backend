@@ -15,7 +15,7 @@ class Student extends Model
         'last_name',
         'grade',
         'parent_id',
-        'school_id',
+        'school_code',
         'approved'
     ];
 

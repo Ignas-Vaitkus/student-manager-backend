@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
             'first_name' => 'Petras',
             'last_name' => 'Petrauskas',
             'parent_id' => $user->id,
-            'school_id' => $school->code,
+            'school_code' => $school->code,
             'grade' => 10
         ]);
 
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'first_name' => 'Rita',
             'last_name' => 'Ritaitė',
             'parent_id' => $user->id,
-            'school_id' => $school->code,
+            'school_code' => $school->code,
             'grade' => 10,
             'approved' => 1
         ]);
