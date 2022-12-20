@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $roles[0]->save();
         $roles[1]->save();
 
-        $admin = \App\Models\User::create([
+        \App\Models\User::create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('password'),
