@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
 
         $school = \App\Models\School::create([
             'code' => 123456789,
-            'name' => 'Saules gimnazija',
+            'name' => 'Saulės gimnazija',
             'address' => 'Savanoriu pr. XX',
         ]);
 
